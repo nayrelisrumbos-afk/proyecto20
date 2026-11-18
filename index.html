@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador Pomodoro usando el framework Vue.js.">
+    <meta name="keywords" content="pomodoro, temporizador, productividad, Vue.js">
+    <meta name="author" content="Nayrelis Rumbos">
+    <title>Pomodoro</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <main id="app" class="cajaPrincipal">
+        <h1>Pomodoro</h1>
+        <h2>{{ tipoSesion }}</h2>
+
+        <p class="reloj" aria-live="polite">{{ tiempoFormateado }}</p>
+
+        <div class="botones">
+            <button @click="iniciar" :disabled="corriendo">Iniciar</button>
+            <button @click="pausar" :disabled="!corriendo">Pausar</button>
+            <button @click="reiniciar">Reiniciar</button>
+        </div>
+
+        <p class="sesiones">Sesiones completadas: {{ sesionesCompletadas }}</p>
+
+        <section class="configuracion">
+            <label>Trabajo <input type="number" v-model="minTrabajo"></label>
+            <label>Descanso <input type="number" v-model="minDescanso"></label>
+            <label>Descanso Largo <input type="number" v-model="minDescansoLargo"></label>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

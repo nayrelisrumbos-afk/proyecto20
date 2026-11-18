@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d7c2db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.cajaPrincipal {
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.reloj {
+    font-size: 50px;
+    color: #4a148c;
+    background: #f3e5f5;
+    border-radius: 8px;
+}
+button {
+    background-color: #8e24aa;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+
+.sesiones {
+    font-size: 14px;
+    color: #555;
+}
+
+.configuracion {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    font-size: 12px;
+}
+
+.configuracion input {
+    width: 40px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
